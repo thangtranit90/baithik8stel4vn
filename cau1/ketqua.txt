@@ -1,0 +1,7 @@
+k apply -f deployment-webserver.yaml
+ 1880  k get all
+ 1881  k get node -o wide
+ 1882  k get pod -o wide
+ 1883  curl 10.49.53.3:30169
+ 1884  curl 10.49.53.4:30169
+ 1885  k describe svc webserver

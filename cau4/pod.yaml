@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+spec:
+  nodeSelector:
+    node-type: worker1
+  containers:
+    - name: web
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+      
+      

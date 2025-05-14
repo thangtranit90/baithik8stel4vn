@@ -1,0 +1,4 @@
+Câu 2: Truy cập cluster tạo ra ở câu 1 và thực hiện các thao tác sau: - Tạo một namespace với tên cau2 - Tạo một pod vớt tên multi-pod với 2 container lần lượt với tên pod1 và pod2, một 
+volume tên vol gắn với pod có type là emptydir {} - Container pod1 sử dụng image busybox:1.31.1 và ghi kết quả của lệnh date vào file 
+/vol/date.log mỗi 5 giây trên shared volume vol - Container pod2 sử dụng image nginx:latest và mount shared volume vol vào trong 
+/usr/share/nginx/html - Lưu pod manifest (yaml) vào ~/cau2/multi-pod.yaml 

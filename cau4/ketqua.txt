@@ -1,0 +1,11 @@
+ 1941  k get node -o wide
+ 1942  kubectl get nodes k8s-worker1 --show-labels
+ 1943  k label nodes k8s-worker1 node-type=worker1
+ 1944  kubectl get nodes k8s-worker1 --show-labels
+ 1945  cd ..
+ 1946  mkdir cau4
+ 1947  vi pod.yaml
+ 1948  k apply -f pod.yaml
+ 1949  kubectl get pod web -o wide
+ 1950  k describe pod web
+ 1951  history

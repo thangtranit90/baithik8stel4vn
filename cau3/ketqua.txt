@@ -1,0 +1,23 @@
+ 1918  mkdir cau3
+ 1919  cd cau3
+ 1920  vi webapp-serviceaccount.yaml
+ 1921  vi webapp-service-serviceaccount.yaml
+ 1922  k apply -f webapp-service-serviceaccount.yaml
+ 1923  k create namespace cau3
+ 1924  vi webapp-service-serviceaccount.yaml
+ 1925  k apply -f webapp-service-serviceaccount.yaml
+ 1926  k api-resources
+ 1927  vi role-rolebinding.yml
+ 1928  k apply -f role-rolebinding.yml
+ 1929  kubectl get roles -n cau3
+ 1930  kubectl get rolebindings -n cau3
+ 1931  kubectl describe role role-readonly -n cau3
+ 1932  kubectl describe rolebinding rolebinding-readonly -n cau3
+ 1933  kubectl get role role-readonly -n cau3 -o yaml
+ 1934  kubectl get rolebinding rolebinding-readonly -n cau3 -o yaml
+ 1935  kubectl auth can-i get deployments --as=system:serviceaccount:cau3:webapp-sa
+ 1936  kubectl auth can-i get deployments --as=system:serviceaccount:cau3:webapp-sa -n cau3
+ 1937  kubectl auth can-i list services --as=system:serviceaccount:cau3:webapp-sa
+ 1938  kubectl auth can-i list services --as=system:serviceaccount:cau3:webapp-sa -n cau3
+ 1939  kubectl auth can-i create pod --as=system:serviceaccount:cau3:webapp-sa -n cau3
+ 1940  history

@@ -1,0 +1,7 @@
+ 1910  vi multipod.yaml
+ 1911  k apply -f multipod.yaml
+ 1912  kubectl get pods -n cau2
+ 1913  kubectl exec -n cau2 multi-pod -c pod1 -- cat /vol/date.log
+ 1914  kubectl exec -n cau2 multi-pod -c pod2 -- ls -la /usr/share/nginx/html
+ 1915  kubectl exec -n cau2 multi-pod -c pod2 -- cat /usr/share/nginx/html/date.log
+ 1916  history
